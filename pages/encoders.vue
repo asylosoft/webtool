@@ -2,9 +2,12 @@
 const tools = [
   {
     title: "URL",
-    description: "Encode/decode URL",
     url: "encoder/url"
   },
+  {
+    title: "Base64",
+    url: "encoder/base64"
+  }
 ]
 </script>
 
