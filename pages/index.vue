@@ -3,6 +3,10 @@ const categories = [
   {
     title: "Generators",
     url: "generators"
+  },
+  {
+    title: "Encoders",
+    url: "encoders"
   }
 ]
 </script>
