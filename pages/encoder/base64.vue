@@ -1,16 +1,16 @@
 <script setup>
 import { ref } from 'vue'
 
-const title = 'URL';
+const title = 'Base64';
 const inputUrl = ref('');
 const outputUrl = ref('');
 
 const encode = () => {
-  outputUrl.value = encodeURIComponent(inputUrl.value);
+  outputUrl.value = btoa(inputUrl.value);
 };
 
 const decode = () => {
-  outputUrl.value = decodeURIComponent(inputUrl.value);
+  outputUrl.value = atob(inputUrl.value);
 }
 </script>
 
@@ -18,7 +18,7 @@ const decode = () => {
   <div class="container-fluid">
     <div class="row">
       <div class="col col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-
+        
         <PageHeader :title="title" />
         <div class="container-fluid text-center">
           <div class="row">
