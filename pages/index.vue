@@ -1,20 +1,20 @@
 <script setup lang="ts">
-const categories = [
-  {
-    title: "Generators",
-    url: "generators"
-  },
-  {
-    title: "Encoders",
-    url: "encoders"
-  }
-]
+import { inject } from 'vue'
+
+const toolkit = inject<{
+  title: string;
+    url: string;
+    tools: {
+        name: string;
+        url: string;
+    }[];
+}[]>('toolkit');
 </script>
 
 <template>
   <div class="container text-center">
     <div class="row">
-      <div class="col col-md-3" v-for="category in categories">
+      <div class="col col-md-3" v-for="category in toolkit">
         
         <div class="card">
           <div class="card-body">
