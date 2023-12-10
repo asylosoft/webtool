@@ -1,14 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { provide } from 'vue'
+import type { ToolCategory } from './models/tool-category'
 
-const toolkit = [
+const toolkit: ToolCategory[] = [
   {
-    title: "Generators",
-    url: "/generators",
+    title: "Converters",
+    url: "/converters",
     tools: [
       {
-        name: "UUID",
-        url: "/generator/uuid"
+        name: "Letter case",
+        url: "/converter/lettercase"
       }
     ]
   },
@@ -25,6 +26,16 @@ const toolkit = [
         url: "/encoder/base64"
       }
     ]
+  },
+  {
+    title: "Generators",
+    url: "/generators",
+    tools: [
+      {
+        name: "UUID",
+        url: "/generator/uuid"
+      }
+    ]
   }
 ]
 
@@ -32,7 +43,7 @@ provide('toolkit', toolkit)
 </script>
 
 <template>
-  <div>
+  <div class="d-flex flex-column vh-100">
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <NuxtLink to="/" class="navbar-brand">WebToolkit</NuxtLink>
@@ -53,7 +64,7 @@ provide('toolkit', toolkit)
         </div>
       </div>
     </nav>
-    <div class="p-3">
+    <div class="bg-body-secondary p-3 flex-grow-1">
       <NuxtPage />
     </div>
   </div>

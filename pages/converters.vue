@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = 'Encoders';
+const title = 'Converters';
 </script>
 
 <template>
