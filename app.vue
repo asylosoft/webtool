@@ -9,7 +9,7 @@ const toolkit: ToolCategory[] = [
     tools: [
       {
         name: "Letter case",
-        url: "/converters/lettercase"
+        url: "/converter/lettercase"
       }
     ]
   },
@@ -43,7 +43,7 @@ provide('toolkit', toolkit)
 </script>
 
 <template>
-  <div>
+  <div class="d-flex flex-column vh-100">
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <NuxtLink to="/" class="navbar-brand">WebToolkit</NuxtLink>
@@ -64,7 +64,7 @@ provide('toolkit', toolkit)
         </div>
       </div>
     </nav>
-    <div class="p-3">
+    <div class="bg-body-secondary p-3 flex-grow-1">
       <NuxtPage />
     </div>
   </div>
