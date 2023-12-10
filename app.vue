@@ -1,14 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { provide } from 'vue'
+import type { ToolCategory } from './models/tool-category'
 
-const toolkit = [
+const toolkit: ToolCategory[] = [
   {
-    title: "Generators",
-    url: "/generators",
+    title: "Converters",
+    url: "/converters",
     tools: [
       {
-        name: "UUID",
-        url: "/generator/uuid"
+        name: "Letter case",
+        url: "/converters/lettercase"
       }
     ]
   },
@@ -23,6 +24,16 @@ const toolkit = [
       {
         name: "Base64",
         url: "/encoder/base64"
+      }
+    ]
+  },
+  {
+    title: "Generators",
+    url: "/generators",
+    tools: [
+      {
+        name: "UUID",
+        url: "/generator/uuid"
       }
     ]
   }
