@@ -17,5 +17,9 @@ export default defineNuxtConfig({
         crossorigin: 'anonymous'
       }]
     }
+  },
+  modules: ['nuxt-gtag'],
+  gtag: {
+    id: 'G-9FBHMCG4RK'
   }
 })
