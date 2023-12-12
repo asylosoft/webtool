@@ -40,6 +40,16 @@ const toolkit: ToolCategory[] = [
         url: "/generator/random-string"
       }
     ]
+  },
+  {
+    title: 'Queries',
+    url: "/queries",
+    tools: [
+      {
+        name: 'JMESPath',
+        url: "/query/jmespath"
+      }
+    ]
   }
 ]
 
