@@ -34,6 +34,10 @@ const toolkit: ToolCategory[] = [
       {
         name: "UUID",
         url: "/generator/uuid"
+      },
+      {
+        name: "Random String",
+        url: "/generator/random-string"
       }
     ]
   }
