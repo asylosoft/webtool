@@ -17,38 +17,32 @@ const run = () => {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-
-        <PageHeader :title="title" />
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              <ToolInput v-model:input-value="inputJson" :multiline="true"/>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-auto">
-              <label for="expression" class="col-form-label">Expression</label>
-            </div>
-            <div class="col">
-              <input type="text" id="expression" class="form-control" aria-describedby="expression" v-model="expression"/>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="d-grid col">
-              <button class="btn btn-primary" @click="run">Run</button>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col">
-              <ToolOutput :output-value="outputJson" :multiline="true"/>
-            </div>
-          </div>
+  <ToolContainer>
+    <PageHeader :title="title" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <ToolInput v-model:input-value="inputJson" :multiline="true"/>
         </div>
-
+      </div>
+      <div class="row mt-3">
+        <div class="col-auto">
+          <label for="expression" class="col-form-label">Expression</label>
+        </div>
+        <div class="col">
+          <input type="text" id="expression" class="form-control" aria-describedby="expression" v-model="expression"/>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="d-grid col">
+          <button class="btn btn-primary" @click="run">Run</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <ToolOutput :output-value="outputJson" :multiline="true"/>
+        </div>
       </div>
     </div>
-  </div>
+  </ToolContainer>
 </template>
