@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/bootstrap": "^5.2.10",
+    "@types/jmespath": "^0.15.2",
     "nuxt": "^3.8.2",
     "nuxt-gtag": "^1.1.1",
     "vue": "^3.3.10",

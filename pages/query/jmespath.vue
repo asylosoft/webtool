@@ -8,7 +8,7 @@ const inputJson = ref('');
 const outputJson = ref('');
 const expression = ref('');
 
-const query = () => {
+const run = () => {
   if (inputJson.value && expression.value) {
     const inputJsonObject = JSON.parse(inputJson.value);
     outputJson.value = jmespath.search(inputJsonObject, expression.value);
@@ -30,15 +30,15 @@ const query = () => {
           </div>
           <div class="row mt-3">
             <div class="col-auto">
-              <label for="length" class="col-form-label">Query</label>
+              <label for="expression" class="col-form-label">Expression</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control" aria-describedby="length" v-model="expression"/>
+              <input type="text" id="expression" class="form-control" aria-describedby="expression" v-model="expression"/>
             </div>
           </div>
           <div class="row mt-3">
             <div class="d-grid col">
-              <button class="btn btn-primary" @click="query">Run</button>
+              <button class="btn btn-primary" @click="run">Run</button>
             </div>
           </div>
           <div class="row mt-3">

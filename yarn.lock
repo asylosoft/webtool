@@ -1240,6 +1240,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/jmespath@^0.15.2":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@types/jmespath/-/jmespath-0.15.2.tgz#00d2b23253079a7f40511d4257a44411cd89b4de"
+  integrity sha512-pegh49FtNsC389Flyo9y8AfkVIZn9MMPE9yJrO9svhq6Fks2MwymULWjZqySuxmctd3ZH4/n7Mr98D+1Qo5vGA==
+
 "@types/node@*":
   version "20.10.3"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.10.3.tgz"
