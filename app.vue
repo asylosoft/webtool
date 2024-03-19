@@ -14,6 +14,16 @@ const toolkit: ToolCategory[] = [
     ]
   },
   {
+    title: "Counters",
+    url: "/counters",
+    tools: [
+      {
+        name: "String token",
+        url: "/counter/string-token"
+      }
+    ]
+  },
+  {
     title: "Encoders",
     url: "/encoders",
     tools: [

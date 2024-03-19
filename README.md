@@ -21,3 +21,8 @@ A collection of simple tools available in the web.
 
 ### [Generators](https://webtoolkit.asylosoft.com/generators)
 - [UUID](https://webtoolkit.asylosoft.com/generator/uuid)
+
+
+## Technology
+- NuxtJS (VueJS)
+- Bootstrap
