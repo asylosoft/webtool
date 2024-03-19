@@ -73,46 +73,39 @@ const generateString = () => {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+  <ToolContainer>
+    <PageHeader :title="title" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto">
+          <label for="length" class="col-form-label">Length</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" id="length" class="form-control" aria-describedby="length" v-model="stringLength"/>
+        </div>
+      </div>
+      <div class="row row-cols-2 mt-3">
+        <div class="col" v-for="option in options">
 
-        <PageHeader :title="title" />
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-auto">
-              <label for="length" class="col-form-label">Length</label>
-            </div>
-            <div class="col-auto">
-              <input type="number" id="length" class="form-control" aria-describedby="length" v-model="stringLength"/>
-            </div>
-          </div>
-          <div class="row row-cols-2 mt-3">
-            <div class="col" v-for="option in options">
-
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" :value="option.value" :id="option.value" v-model="pickedOptions">
-                <label class="form-check-label" :for="option.value">
-                  {{ option.text }}
-                </label>
-              </div>
-
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col d-grid">
-              <button class="btn btn-primary" @click="generateString">Generate String</button>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col">
-              <ToolOutput :output-value="newString"/>
-            </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" :value="option.value" :id="option.value" v-model="pickedOptions">
+            <label class="form-check-label" :for="option.value">
+              {{ option.text }}
+            </label>
           </div>
 
         </div>
-
+      </div>
+      <div class="row mt-3">
+        <div class="col d-grid">
+          <button class="btn btn-primary" @click="generateString">Generate String</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <ToolOutput :output-value="newString"/>
+        </div>
       </div>
     </div>
-  </div>
+  </ToolContainer>
 </template>
