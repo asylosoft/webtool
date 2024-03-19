@@ -79,11 +79,6 @@ const convert = () => {
               <ToolInput v-model:input-value="inputString"/>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="d-grid col">
-              <button class="btn btn-primary" @click="convert">Convert</button>
-            </div>
-          </div>
           <div class="row text-start mt-3">
             <div class="col px-3">
               <label><em>Letter:</em></label>
@@ -118,6 +113,11 @@ const convert = () => {
                   {{ delimitercase }}
                 </label>
               </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="d-grid col">
+              <button class="btn btn-primary" @click="convert">Convert</button>
             </div>
           </div>
           <div class="row mt-3">
