@@ -13,11 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - uses: actions/setup-node@v4.0.0
-      - run: cd app
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: npx nuxi generate
-      # - run: yarn build
+      - run: |
+          cd app
+          npm install -g yarn
+          yarn install --frozen-lockfile
+          npx nuxi generate
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
