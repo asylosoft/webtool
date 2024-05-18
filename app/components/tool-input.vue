@@ -17,6 +17,10 @@ const props = defineProps({
     type: Number,
     default: 3,
     required: false
+  },
+  handleKeyup: {
+    type: Function,
+    required: false
   }
 })
 
@@ -46,19 +50,19 @@ const handleChange = (event) => {
 
 <template>
   <div v-if="multiline && enablePaste" class="input-group">
-    <textarea class="form-control" aria-label="Multiline input" :rows="minRows" v-model="inputRef" @change="handleChange"></textarea>
+    <textarea class="form-control" aria-label="Multiline input" :rows="minRows" v-model="inputRef" @change="handleChange" @keyup="props.handleKeyup"></textarea>
     <button v-if="isPasted" class="btn btn-secondary">Pasted</button>
     <button v-else class="btn btn-secondary" @click="paste">Paste</button>
   </div>
   <div v-else-if="multiline">
-    <textarea class="form-control" aria-label="Multiline input" :rows="minRows" v-model="inputRef" @change="handleChange"></textarea>
+    <textarea class="form-control" aria-label="Multiline input" :rows="minRows" v-model="inputRef" @change="handleChange" @keyup="props.handleKeyup"></textarea>
   </div>
   <div v-else-if="enablePaste" class="input-group">
-    <input type="text" class="text-black text-center form-control border border-secondary" v-model="inputRef" :title="inputRef" @change="handleChange"/>
+    <input type="text" class="text-black form-control border border-secondary" v-model="inputRef" :title="inputRef" @change="handleChange" @keyup="props.handleKeyup"/>
     <button v-if="isPasted" class="btn btn-secondary">Pasted</button>
     <button v-else class="btn btn-secondary" @click="paste">Paste</button>
   </div>
   <div v-else>
-    <input type="text" class="text-black text-center form-control border border-secondary" v-model="inputRef" :title="inputRef" @change="handleChange"/>
+    <input type="text" class="text-black form-control border border-secondary" v-model="inputRef" :title="inputRef" @change="handleChange" @keyup="props.handleKeyup"/>
   </div>
 </template>

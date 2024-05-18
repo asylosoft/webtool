@@ -32,7 +32,7 @@ const copy = () => {
     <textarea class="form-control" aria-label="Multiline input" :rows="minRows" :value="outputValue"></textarea>
   </div>
   <div v-else class="input-group">
-    <input type="text" class="text-black text-center form-control border border-secondary" readonly :value="outputValue" :title="outputValue" />
+    <input type="text" class="text-black form-control border border-secondary" readonly :value="outputValue" :title="outputValue" />
     <button v-if="isCopied" class="btn btn-secondary">Copied</button>
     <button v-else class="btn btn-secondary" @click="copy">Copy</button>
   </div>
